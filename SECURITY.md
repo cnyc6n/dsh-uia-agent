@@ -1,5 +1,7 @@
 # Security
 
+> **[中文](./SECURITY.zh.md) | English**
+
 ## What this plugin does
 
 Registers one `uia` tool that lets the model drive the Windows UI Automation

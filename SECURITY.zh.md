@@ -1,5 +1,7 @@
 # 安全说明
 
+> **[English](./SECURITY.md) | 中文**
+
 ## 本插件做什么
 
 注册一个 `uia` 工具，让模型驱动 Windows UI Automation exe（`cnyc6n/uia-agent`）。exe 以 **base64 内嵌**在本包（`assets/uia_agent.exe.b64`），并附带其 SHA-256（`assets/uia_agent.exe.sha256`），安装与使用**完全离线**。
