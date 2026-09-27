@@ -9,7 +9,7 @@ dsh 插件：注册一个 `uia` 工具，让模型能枚举窗口、快照 UI �
 
 ## 一键安装（新手）
 
-仓库根目录有**两个自包含脚本**，下载**任一个**即可（互不依赖）：
+仓库根目录或 **[v1.0 release 页面](https://github.com/cnyc6n/dsh-uia-agent/releases)** 有**两个自包含脚本**，下载**任一个**即可（互不依赖）：
 
 - **install.cmd** — Windows 上双击运行
 - **install.ps1** — `powershell -ExecutionPolicy Bypass -File install.ps1`

@@ -15,7 +15,7 @@ and control window state (topmost / minimize / maximize / restore / close).
 ## One-click install (beginners)
 
 Either of these two self-contained files installs everything. Download ONE of them
-from the repo root (they do not depend on each other):
+from the repo root or from the **[v1.0 release](https://github.com/cnyc6n/dsh-uia-agent/releases)** page (they do not depend on each other):
 
 - **install.cmd** — double-click it on Windows
 - **install.ps1** — `powershell -ExecutionPolicy Bypass -File install.ps1`
