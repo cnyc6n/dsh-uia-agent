@@ -1,6 +1,6 @@
 # dsh-uia-agent - Windows UI Automation agent for DeepSeek Harness
 
-> **[中文版](./README.zh.md) | English**
+> **[中文](./README.zh.md) | English**
 
 A dsh plugin that registers one `uia` tool, letting the model enumerate windows,
 snapshot UI trees, find controls, click, type text, scroll/drag/swipe, screenshot,

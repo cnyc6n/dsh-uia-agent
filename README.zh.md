@@ -1,6 +1,6 @@
 # dsh-uia-agent — DeepSeek Harness 的 Windows UI 自动化插件
 
-> **[English](./README.md) | 中文版**
+> **[English](./README.md) | 中文**
 
 dsh 插件：注册一个 `uia` 工具，让模型能枚举窗口、快照 UI 树、查找控件、点击、输入文本、滚动/拖动/滑动、截图、控制窗口状态（置顶/最小化/最大化/恢复/关闭）。
 
