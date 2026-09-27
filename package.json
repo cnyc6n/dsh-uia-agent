@@ -1,0 +1,44 @@
+{
+  "name": "dsh-uia-agent",
+  "version": "0.2.0",
+  "description": "Windows UI Automation agent for dsh: list/snapshot/find/click/set_text/get_text/scroll/drag/swipe/screenshot + window state (topmost/minimize/maximize/restore/close). Permission-tiered (read-only / workspace-write / danger-full-access) with approval-based escalation. exe auto-releases from embedded assets.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "scripts",
+    "README.md"
+  ],
+  "engines": {
+    "dsh": ">=0.0.1",
+    "node": ">=18.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dshx": {
+    "contributes": {
+      "tools": [
+        "uia"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1-rc.1",
+    "@deepseek-ai/dsh-sandbox": "*",
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "scripts": {
+    "install:exe": "powershell -ExecutionPolicy Bypass -File scripts/install.ps1"
+  }
+}
