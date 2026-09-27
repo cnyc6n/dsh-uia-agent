@@ -12,7 +12,19 @@ and control window state (topmost / minimize / maximize / restore / close).
   self-releases it to the fixed location `%DSH_HOME%\bin\uia_agent.exe` on startup.
   If release fails, it console.errors and the tool call reports how to add the exe.
 
-## One-command install
+## One-click install (beginners)
+
+Either of these two self-contained files installs everything. Download ONE of them
+from the repo root (they do not depend on each other):
+
+- **install.cmd** — double-click it on Windows
+- **install.ps1** — `powershell -ExecutionPolicy Bypass -File install.ps1`
+
+The script checks dsh, runs `dsh plugin --profile web add github:cnyc6n/dsh-uia-agent`,
+and tells you to restart. No compile, no exe download: the plugin embeds the exe
+as base64 and self-releases it (hash-verified) on first start.
+
+## One-command install (manual)
 
 ```powershell
 dsh plugin --profile web add github:cnyc6n/dsh-uia-agent

@@ -7,7 +7,17 @@ dsh 插件：注册一个 `uia` 工具，让模型能枚举窗口、快照 UI �
 - 工具 exe 独立仓库：**https://github.com/cnyc6n/uia-agent**（C++17/MSVC 单 exe，release 含 uia_agent.exe）
 - 本插件自带 exe 的 base64 内嵌资产（`assets/uia_agent.exe.b64`），启动时自动释放到固定位置 `%DSH_HOME%\bin\uia_agent.exe`；释放失败会 console.error 并在工具调用时提示补上。
 
-## 一条命令安装
+## 一键安装（新手）
+
+仓库根目录有**两个自包含脚本**，下载**任一个**即可（互不依赖）：
+
+- **install.cmd** — Windows 上双击运行
+- **install.ps1** — `powershell -ExecutionPolicy Bypass -File install.ps1`
+
+脚本会自动：检测 dsh → `dsh plugin --profile web add github:cnyc6n/dsh-uia-agent` → 提示重启。
+无需编译、无需下载 exe：插件包内嵌 base64，首次启动自动释放并校验哈希。
+
+## 手动安装
 
 ```powershell
 dsh plugin --profile web add github:cnyc6n/dsh-uia-agent
