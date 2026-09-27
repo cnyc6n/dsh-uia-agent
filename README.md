@@ -6,7 +6,7 @@ A dsh plugin that registers one `uia` tool, letting the model enumerate windows,
 snapshot UI trees, find controls, click, type text, scroll/drag/swipe, screenshot,
 and control window state (topmost / minimize / maximize / restore / close).
 
-- Tool exe lives in its own repo: **https://github.com/cnyc6n/uia-agent**
+- Tool exe lives in its own repo: **[uia-agent](https://github.com/cnyc6n/uia-agent)**
   (C++17 / MSVC single exe; the release ships `uia_agent.exe`).
 - This plugin embeds the exe as a base64 asset (`assets/uia_agent.exe.b64`) and
   self-releases it to the fixed location `%DSH_HOME%\bin\uia_agent.exe` on startup.

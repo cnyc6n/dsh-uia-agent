@@ -4,7 +4,7 @@
 
 dsh 插件：注册一个 `uia` 工具，让模型能枚举窗口、快照 UI 树、查找控件、点击、输入文本、滚动/拖动/滑动、截图、控制窗口状态（置顶/最小化/最大化/恢复/关闭）。
 
-- 工具 exe 独立仓库：**https://github.com/cnyc6n/uia-agent**（C++17/MSVC 单 exe，release 含 uia_agent.exe）
+- 工具 exe 独立仓库：**[uia-agent](https://github.com/cnyc6n/uia-agent)**（C++17/MSVC 单 exe，release 含 uia_agent.exe）
 - 本插件自带 exe 的 base64 内嵌资产（`assets/uia_agent.exe.b64`），启动时自动释放到固定位置 `%DSH_HOME%\bin\uia_agent.exe`；释放失败会 console.error 并在工具调用时提示补上。
 
 ## 一键安装（新手）
