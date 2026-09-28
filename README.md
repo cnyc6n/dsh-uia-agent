@@ -42,7 +42,7 @@ Aligned with the dsh sandbox model (same `sandbox_permissions` + `justification`
 | --- | --- | --- |
 | read-only | none (runs directly) | list / snapshot / snapshot_all / find / get_text / screenshot |
 | workspace-write | `workspace-write` | minimize / maximize / restore / topmost / close |
-| danger-full-access | `danger-full-access` | click / set_text / scroll / drag / swipe |
+| danger-full-access | `danger-full-access` | click / set_text / scroll / drag / swipe / send_keys / foreach |
 
 Higher-tier commands must pass `sandbox_permissions` + `justification`; they go
 through user approval (approveEscalation) before execution. Missing or mismatched
@@ -50,7 +50,7 @@ permission returns an error guiding the model to retry with the correct tier.
 
 ## `uia` tool parameters
 
-`command` (enum of 16 actions), `hwnd`, `depth`, `query` (find JSON), `text`,
+`command` (enum of 20 actions), `hwnd`, `depth`, `query` (find JSON), `text`, `keys`, `set`, `timeout_ms`, `interval_ms`, `cmd`, `args`,
 `mode`, `x/y/x1/y1/x2/y2`, `duration`, `amount`, `direction`, `distance`, `out`,
 `base64`, `off`, plus escalation params `sandbox_permissions` / `justification`.
 

@@ -33,13 +33,13 @@ dsh plugin --profile web add github:cnyc6n/dsh-uia-agent
 | --- | --- | --- |
 | read-only | 无（直接执行） | list / snapshot / snapshot_all / find / get_text / screenshot |
 | workspace-write | `workspace-write` | minimize / maximize / restore / topmost / close |
-| danger-full-access | `danger-full-access` | click / set_text / scroll / drag / swipe |
+| danger-full-access | `danger-full-access` | click / set_text / scroll / drag / swipe / send_keys / foreach |
 
 高档位命令执行前必须先带 `sandbox_permissions` + `justification`，经用户审批（approveEscalation）通过后才真正执行；未带或档位不匹配会直接报错，引导模型携带正确权限重试。
 
 ## 工具 `uia` 参数
 
-`command`（枚举 16 个动作）、`hwnd`、`depth`、`query`（find 条件 JSON）、`text`、`mode`、`x/y/x1/y1/x2/y2`、`duration`、`amount`、`direction`、`distance`、`out`、`base64`、`off`，以及提权参数 `sandbox_permissions` / `justification`。
+`command`（枚举 20 个动作）、`hwnd`、`depth`、`query`（find 条件 JSON）、`text`、`keys`、`set`、`timeout_ms`、`interval_ms`、`cmd`、`args`、`mode`、`x/y/x1/y1/x2/y2`、`duration`、`amount`、`direction`、`distance`、`out`、`base64`、`off`，以及提权参数 `sandbox_permissions` / `justification`。
 
 模型调用后收到一行摘要文本；结构化原始结果经 `presentationMeta` 持久化。
 
