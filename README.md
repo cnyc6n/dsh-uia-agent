@@ -24,6 +24,32 @@ The script checks dsh, runs `dsh plugin --profile web add github:cnyc6n/dsh-uia-
 and tells you to restart. No compile, no exe download: the plugin embeds the exe
 as base64 and self-releases it (hash-verified) on first start.
 
+## Install from npm
+
+```powershell
+npm i -g dsh-uia-agent
+# then point dsh's profile at it (or follow the one-command install below for github:)
+```
+
+Published versions: **1.1.0** (latest), **1.0.0** (legacy tag).
+
+## Changelog
+
+### 1.1.0 (latest)
+- **geometry / props** commands (window geometry read/write; control properties)
+- **drag** `steps` / `hold_ms` for precise drag control
+- **send_keys / clipboard / wait_for / foreach** commands
+- **snapshot** inlines the control tree into model text
+- **screenshot** returns the saved file path (model chooses how to view)
+- permission model: commands at or below the session permission run directly
+- fixed: raw output always an object, get_text missing-field fallback
+
+### 1.0.0
+- Initial standalone release: list / snapshot / snapshot_all / find / click /
+  set_text / get_text / scroll / drag / swipe / screenshot / window state
+  (topmost / minimize / maximize / restore / close)
+- permission tiers + approval escalation, embedded exe self-release (sha256-verified)
+
 ## One-command install (manual)
 
 ```powershell

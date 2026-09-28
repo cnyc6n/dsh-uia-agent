@@ -17,6 +17,31 @@ dsh 插件：注册一个 `uia` 工具，让模型能枚举窗口、快照 UI �
 脚本会自动：检测 dsh → `dsh plugin --profile web add github:cnyc6n/dsh-uia-agent` → 提示重启。
 无需编译、无需下载 exe：插件包内嵌 base64，首次启动自动释放并校验哈希。
 
+## npm 安装
+
+```powershell
+npm i -g dsh-uia-agent
+# 然后让 dsh 的 profile 指向它（或按下文一键安装用 github: 源）
+```
+
+已发布版本：**1.1.0**（latest）、**1.0.0**（legacy 标签）。
+
+## 更新日志
+
+### 1.1.0（最新）
+- 新增 **geometry / props** 命令（窗口几何读写；控件属性）
+- **drag** 支持 `steps` / `hold_ms` 精细控制
+- 新增 **send_keys / clipboard / wait_for / foreach** 命令
+- **snapshot** 把控件树内联进模型文本
+- **screenshot** 返回保存的文件路径（模型自行决定如何查看）
+- 权限模型：命令档位 ≤ 当前会话权限时直接执行
+- 修复：raw 输出恒为对象、get_text 缺字段容错
+
+### 1.0.0
+- 首个独立发布：list / snapshot / snapshot_all / find / click / set_text /
+  get_text / scroll / drag / swipe / screenshot / 窗口状态（置顶/最大化/最小化/恢复/关闭）
+- 权限分档 + 审批提权、内嵌 exe 自释放（sha256 校验）
+
 ## 手动安装
 
 ```powershell
