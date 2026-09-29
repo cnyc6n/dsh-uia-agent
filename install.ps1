@@ -7,8 +7,8 @@ param(
 )
 
 # 当前发布版本（发 release 时同步改这里——两个值配套，npm 号与 GitHub tag 对应）
-$GITHUB_REF = "v1.1"      # GitHub tag
-$NPM_REF = "1.1.1"        # npm 版本（对应 GitHub v1.1 的发布）
+$GITHUB_REF = "v1.2"      # GitHub tag
+$NPM_REF = "1.2.0"        # npm 版本（对应 GitHub v1.2 的发布）
 $ErrorActionPreference = 'Stop'
 
 function Say($msg) { Write-Host "[dsh-uia-agent] $msg" -ForegroundColor Cyan }

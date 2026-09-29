@@ -28,6 +28,12 @@ npm i -g dsh-uia-agent
 
 ## 更新日志
 
+### 1.2.0
+- 新增 **desktop** 命令：自动定位桌面图标宿主（Progman + WorkerW 双布局）并列出全部图标（含屏幕坐标）
+- 新增**全局 timeout** 参数：所有命令都可传 `timeout`（毫秒），转发给 exe
+- 修复：FindDesktopIconHost 只查 WorkerW（漏掉 Progman 布局）
+
+
 ### 1.1.0（最新）
 - 新增 **geometry / props** 命令（窗口几何读写；控件属性）
 - **drag** 支持 `steps` / `hold_ms` 精细控制

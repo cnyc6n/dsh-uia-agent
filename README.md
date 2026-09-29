@@ -35,6 +35,12 @@ Published versions: **1.1.0** (latest), **1.0.0** (legacy tag).
 
 ## Changelog
 
+### 1.2.0
+- **desktop** command: auto-find the desktop icon host (Progman + WorkerW layouts) and list all icons with screen coords
+- **global timeout** param: every command accepts `timeout` (ms) forwarded to the exe
+- fixed: FindDesktopIconHost only checked WorkerW (missed Progman layout)
+
+
 ### 1.1.0 (latest)
 - **geometry / props** commands (window geometry read/write; control properties)
 - **drag** `steps` / `hold_ms` for precise drag control
