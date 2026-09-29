@@ -28,6 +28,9 @@ npm i -g dsh-uia-agent
 
 ## 更新日志
 
+### 1.2.1
+- **desktop** 增加 `--limit`（返回图标上限；0=全部）和 `--name`（子串过滤）——不再截断，能看到每个图标
+
 ### 1.2.0
 - 新增 **desktop** 命令：自动定位桌面图标宿主（Progman + WorkerW 双布局）并列出全部图标（含屏幕坐标）
 - 新增**全局 timeout** 参数：所有命令都可传 `timeout`（毫秒），转发给 exe

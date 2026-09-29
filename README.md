@@ -35,6 +35,9 @@ Published versions: **1.1.0** (latest), **1.0.0** (legacy tag).
 
 ## Changelog
 
+### 1.2.1
+- **desktop** gains `--limit` (max icons returned; 0 = all) and `--name` (substring filter) — see every icon without truncation
+
 ### 1.2.0
 - **desktop** command: auto-find the desktop icon host (Progman + WorkerW layouts) and list all icons with screen coords
 - **global timeout** param: every command accepts `timeout` (ms) forwarded to the exe

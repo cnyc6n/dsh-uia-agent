@@ -1,6 +1,6 @@
 {
   "name": "dsh-uia-agent",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Windows UI Automation agent for dsh: list/snapshot/find/click/set_text/get_text/scroll/drag/swipe/screenshot + window state (topmost/minimize/maximize/restore/close). Permission-tiered (read-only / workspace-write / danger-full-access) with approval-based escalation. exe auto-releases from embedded assets.",
   "license": "GPL-3.0",
   "type": "module",
