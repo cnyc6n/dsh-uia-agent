@@ -5,6 +5,11 @@
 param(
     [string]$ProfileName = "web"
 )
+
+# 当前发布版本（发 release 时同步改这里；npm 用 patch 号）
+$GITHUB_REF = "v1.1"      # GitHub tag
+try { $NPM_REF = (npm view dsh-uia-agent version 2>$null) } catch { $NPM_REF = "latest" }
+if (-not $NPM_REF) { $NPM_REF = "latest" }
 $ErrorActionPreference = 'Stop'
 
 function Say($msg) { Write-Host "[dsh-uia-agent] $msg" -ForegroundColor Cyan }
@@ -34,11 +39,15 @@ Say "dsh found: $dshPath"
 # 2) node version (informational)
 try { Say "Node: $(node -v 2>&1)" } catch { Warn "node check skipped" }
 
-# 3) install the plugin (github: dep; plugin ships embedded b64 asset)
-Say "Adding plugin to profile '$ProfileName' ..."
-& $dshPath plugin --profile $ProfileName add github:cnyc6n/dsh-uia-agent
-if ($LASTEXITCODE -ne 0) { Fail "dsh plugin add failed (exit=$LASTEXITCODE). Check GitHub reachability." }
-Say "Plugin added to profile '$ProfileName'"
+# 3) install the plugin: try GitHub (pinned tag) first, fall back to npm (pinned version)
+Say "Adding plugin to profile '$ProfileName' (GitHub ref=$GITHUB_REF / npm=$NPM_REF) ..."
+& $dshPath plugin --profile $ProfileName add "github:cnyc6n/dsh-uia-agent#$GITHUB_REF"
+if ($LASTEXITCODE -ne 0) {
+    Warn "GitHub install failed (exit=$LASTEXITCODE), trying npm ..."
+    & $dshPath plugin --profile $ProfileName add "dsh-uia-agent@$NPM_REF"
+    if ($LASTEXITCODE -ne 0) { Fail "Both GitHub and npm install failed. Check network (GitHub/npm reachable)." }
+}
+Say "Plugin added to profile '$ProfileName' (version pinned: $GITHUB_REF / $NPM_REF)"
 
 # 4) next steps
 Say ""
