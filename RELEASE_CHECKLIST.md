@@ -1,5 +1,11 @@
 # Release Checklist / 发布检查清单
 
+> **铁律：功能冻结后再发布。** 打 tag / publish 之前，必须确认所有功能改完、
+> README + changelog 同步改完。补丁版本只用于修 bug，不用于"漏了文档"。
+> （教训：1.1.0→1.1.1 漏 changelog、1.2.0→1.2.1 漏 desktop limit/name）
+
+
+
 > Keep both repos in sync. Run top-to-bottom; tick every box before tagging.
 > 两个仓库同步发布，从上到下执行，打 tag 前必须全部勾选。
 
