@@ -7,7 +7,7 @@ param(
 )
 
 # 当前发布版本（发 release 时同步改这里——两个值配套，npm 号与 GitHub tag 对应）
-$GITHUB_REF = "v1.2"      # GitHub tag
+$GITHUB_REF = "v1.2.2"      # GitHub tag
 $NPM_REF = "1.2.0"        # npm 版本（对应 GitHub v1.2 的发布）
 $ErrorActionPreference = 'Stop'
 
